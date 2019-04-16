@@ -5,7 +5,7 @@
     <%#
     HTML側のバリデーションを無効化する。　railsチュートリアルには未記載の定義 %>
     <%# = form_for(@user) do |f| %>
-    <%= form_for(@user, :html => {:novalidate => 'novalidate'}) do |f| %>
+    <%= form_for(@user, url:signup_path , :html => {:novalidate => 'novalidate'}) do |f| %>
       <%= render 'shared/error_messages' %>
 
       <%= f.label :name %>
